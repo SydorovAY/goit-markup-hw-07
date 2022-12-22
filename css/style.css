@@ -73,8 +73,8 @@ img {
 	letter-spacing: 0.02em;
 }
 
-.conteiner {
-	width: 1158px;
+.container {
+	min-width: 320px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
@@ -93,8 +93,30 @@ img {
 	text-transform: uppercase;
 }
 
-/* ==================== header ==================== */
+/* ********   MOBILE   ********* */
 
+@media screen and (max-width: 428px) {
+
+.container {
+	padding:  16px 16px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.prymary-brand {
+	color: var(--Focused-link-color);
+}
+.container .logo {
+	color: var(--Headings-color);
+}
+
+.mobile-menu {
+	display: none;}
+}
+
+
+/* ==================== header ==================== */
+/* 
 .header {
 	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -110,9 +132,7 @@ img {
 	padding: 24px 0;
 }
 
-.prymary-brand {
-	color: var(--Focused-link-color);
-}
+
 
 .site-nav {
 	display: flex;
@@ -1030,4 +1050,4 @@ transition: box-shadow;
 	font-size: 20px;
 	line-height: 1.2;
 	margin-bottom: 8px;
-}
+} */
