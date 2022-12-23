@@ -88,7 +88,9 @@ img {
 	text-transform: uppercase;
 }
 
-/* ********   MOBILE MAX   ********* */
+/* ==================== HEADER ==================== */
+
+/* ********  MOBILE ********* */
 
 @media screen and (max-width: 768px) {
 
@@ -183,8 +185,10 @@ img {
 	}
 
 	.mobile-menu .contacts-list:last-child .link {
+			font-weight: 500;
+			margin-bottom: 40px;
 		color: var(--Focused-link-color);
-		margin-bottom: 40px;
+
 	}
 
 	.mobile-menu .contacts-list:first-child .link {
@@ -234,6 +238,21 @@ img {
 		border: 1px solid rgba(0, 0, 0, 0.1);
 	}
 
+	.close-menu-btn:hover,
+	.close-menu-btn:focus,
+	.close-menu-btn:active {
+		color: var(--bg-white-color);
+		background-color: var(--button-active-color);
+			transition-duration: 250ms;
+				transition-timing-function:
+					cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.close-menu {
+		fill: currentColor;
+	}
+
+
 }
 
 .prymary-brand {
@@ -261,6 +280,8 @@ img {
 
 
 }
+
+/* *********** TABLET *********** */
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
 
@@ -377,6 +398,8 @@ img {
 
 }
 
+/* ********** DESCTOP *********** */
+
 @media screen and (min-width: 1200px) {
 
 	.header {
@@ -399,29 +422,18 @@ img {
 		line-height: 1.5;
 	}
 
-		.contacts-link {
-			padding-top: 24px;
-				padding-bottom: 24px;
-		}
-		
-		.contacts-list:first-child {
-			margin-right: 40px;
-		}
+	.contacts-link {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
 
+	.contacts-list:first-child {
+		margin-right: 40px;
+	}
 
+	/*=========================== hero ===================== */
 
-/* ==================== header ==================== */
-/* 
-
-
-
-
-/* ===== contacts=====  */
-
-/*  */
-/*=========================== hero ===================== */
-
-/* .hero {
+	/* .hero {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -571,9 +583,9 @@ img {
 
 } */
 
-/* =====modal form===== */
+	/* =====modal form===== */
 
-/* .form-modal-title {
+	/* .form-modal-title {
 	font-weight: 700;
 	margin-top: 48px;
 	margin-bottom: 16px;
@@ -783,9 +795,9 @@ border-color: var(--button-active-color);
 	background-color: var(--button-active-color);
 } */
 
-/* ===== section-feature ===== */
+	/* ===== section-feature ===== */
 
-/* .feature-list {
+	/* .feature-list {
 	display: flex;
 }
 
@@ -822,9 +834,9 @@ border-color: var(--button-active-color);
 } */
 
 
-/* ===== section specialization ===== */
+	/* ===== section specialization ===== */
 
-/* .section.specialization {
+	/* .section.specialization {
 	padding-bottom: 120px;
 }
 
@@ -846,9 +858,9 @@ border-color: var(--button-active-color);
 	margin-right: var(--card-set-gap);
 } */
 
-/* ===== section our team ===== */
+	/* ===== section our team ===== */
 
-/* .section.team {
+	/* .section.team {
 	padding-top: 120px;
 	padding-bottom: 120px;
 
@@ -927,9 +939,9 @@ border-color: var(--button-active-color);
 	background-color: var(--button-active-color);
 } */
 
-/* ===== Customers ====== */
+	/* ===== Customers ====== */
 
-/* .section-customers {
+	/* .section-customers {
 	padding: 120px 0;
 }
 
@@ -987,9 +999,9 @@ border-color: var(--button-active-color);
 	pointer-events: none;
 } */
 
-/* ================ footer ============= */
+	/* ================ footer ============= */
 
-/* .footer {
+	/* .footer {
 	padding: 100px 0;
 	background-color: var(--Headings-color);
 }
@@ -1129,16 +1141,16 @@ border-color: var(--button-active-color);
 	margin-right: 16px;
 } */
 
-/* =================== portfolio ==================== */
+	/* =================== portfolio ==================== */
 
-/* .section.portfolio {
+	/* .section.portfolio {
 	padding-top: 96px;
 	padding-bottom: 120px;
 } */
 
-/* ===== portfolio filter ===== */
+	/* ===== portfolio filter ===== */
 
-/* .filter-nav {
+	/* .filter-nav {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 72px;
@@ -1178,9 +1190,9 @@ border-color: var(--button-active-color);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 } */
 
-/* ===== portfolio list ===== */
+	/* ===== portfolio list ===== */
 
-/* .portfolio-list {
+	/* .portfolio-list {
 	display: flex;
 	flex-wrap: wrap;
 	flex-basis: calc((100% - 48px) / 3);
