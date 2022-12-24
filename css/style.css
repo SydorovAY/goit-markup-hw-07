@@ -88,6 +88,12 @@ img {
 	text-transform: uppercase;
 }
 
+.container {
+	padding: 16px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 /* ==================== HEADER ==================== */
 
 /* ********  MOBILE ********* */
