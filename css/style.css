@@ -136,7 +136,7 @@ img {
 		pointer-events: painted;
 	}
 
-	.mobile-menu-conteiner {
+	.mobile-menu-container {
 		display: flex;
 		flex-direction: column;
 		position: relative;
@@ -273,7 +273,7 @@ img {
 		margin: 0 auto;
 	}
 
-	.mobile-menu-conteiner {
+	.mobile-menu-container {
 		width: 428px;
 		margin: 0 auto;
 	}
