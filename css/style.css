@@ -216,9 +216,7 @@ margin: auto;
 	margin-bottom: 12px;
 }
 
-.social-list-item:not(:last-child) {
-	margin-right: var(--card-set-gap);
-}
+
 
 .social-list {
 	display: flex;
@@ -492,8 +490,10 @@ margin: auto;
 		display: flex;
 		flex-direction: column;
 		position: relative;
+			max-width: 428px;
 		padding: 40px;
-		width: 100%;
+		margin: auto;
+	
 		height: 100%;
 		background-color: var(--bg-white-color);
 	}
@@ -553,9 +553,10 @@ margin: auto;
 		margin-bottom: 48px;
 	}
 
+		
 	.social-list {
 		justify-content: space-between;
-		width: 100%;
+		max-width: 328px;
 	}
 
 
@@ -906,6 +907,9 @@ margin: auto;
 		display: flex;
 	}
 
+		.social-list-item:not(:last-child) {
+			margin-right: var(--card-set-gap);
+		}
 
 		.subscribe-area {
 			display: flex;
