@@ -809,7 +809,8 @@ img {
 @media screen and (min-width: 768px) {
 
 	.menu-hamburger-btn,
-	.mobile-menu {
+	.close-menu-btn,
+	.mobile-menu .social-list  {
 		display: none;
 	}
 
