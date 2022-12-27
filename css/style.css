@@ -39,7 +39,7 @@ body {
 	color: var(--Body-text-color);
 	font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 16px;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 }
 
@@ -56,7 +56,8 @@ img {
 }
 
 
-.button {
+.button,
+.link {
 	cursor: pointer;
 }
 
@@ -408,7 +409,6 @@ img {
 
 	padding: 8px 24px;
 
-	cursor: pointer;
 	border: none;
 	border-radius: 4px;
 	background-color: var(--Focused-link-color);
@@ -433,6 +433,91 @@ img {
 	margin-right: 16px;
 }
 
+/* ******************** PORTFOLIO GENERAL ************************* */
+
+.filter-nav {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.butoon-filter {
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
+
+	border-radius: 4px;
+	color: var(--Focused-link-color);
+	background-color: var(--backgrounds-Light-color);
+	border: 1px solid var(--Subtle-backgrounds-color);
+
+	transition: background-color, color, border, box-shadow, 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.butoon-filter:hover,
+.butoon-filter:focus,
+.butoon-filter:active {
+	border: 1px solid var(--button-active-color);
+	background-color: var(--button-active-color);
+	color: var(--bg-white-color);
+}
+
+
+.portfolio-list .item {
+	display: block;
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+	transition: box-shadow, 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list .link:hover,
+.portfolio-list .link:focus {
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-list-img {
+	position: relative;
+	overflow: hidden;
+}
+
+.portfolio-list-info .text {
+	color: var(--backgrounds-Light-color);
+}
+
+.portfolio-list-info {
+	position: absolute;
+	padding: 40px 32px;
+
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	transform: translateY(100%);
+	background-color: var(--Focused-link-color);
+
+	transition: transform;
+	transition-duration: 250ms;
+	transition-timing-function:
+		cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list .link:hover .portfolio-list-info,
+.portfolio-list .link:focus .portfolio-list-info {
+	transform: translateY(0);
+}
+
+.list-content {
+	padding: 32px 16px;
+}
+
+.portfolio-title {
+	font-weight: 500px;
+	font-size: 20px;
+	line-height: 1.2;
+	margin-bottom: 8px;
+}
+
+
 /* ____________________ GENERAL ______________ */
 
 /* *******************  MOBILE ****************** */
@@ -453,6 +538,7 @@ img {
 		display: flex;
 		justify-content: space-between;
 	}
+
 
 	/* ***************************** MENU MOBILE *************************** */
 
@@ -651,6 +737,31 @@ img {
 		margin-bottom: 72px;
 	}
 
+	/* ****************** PORTFOLIO MOBILE ********************** */
+	.section.portfolio {
+		padding-top: 48px;
+		padding-bottom: 48px;
+	}
+
+	.filter-nav {
+		width: 264px;
+		gap: 16px 24px;
+		margin-bottom: 48px;
+	}
+
+	.butoon-filter {
+		text-align: center;
+		padding: 7px 15px;
+	}
+
+	.portfolio-list .item {
+		max-width: 396px;
+	}
+
+	.portfolio-list .item:not(:last-child) {
+		margin-bottom: 48px;
+	}
+
 
 }
 
@@ -659,18 +770,15 @@ img {
 
 /* _____________________ MIN WIDTH 428 _____________________ */
 
-@media screen and (min-width: 428px) {
+@media screen and (min-width: 428px) and (max-width: 768px) {
 	.container {
 		width: 428px;
 	}
-
-
-
 }
 
 /* ____________________  MIN WIDTH 428 ______________________ */
 
-/* ____________________ MAX WIDTH 1200 ______________________ */
+/* ____________________ MOBILE-TABLET ______________________ */
 
 @media screen and (max-width: 1200px) {
 
@@ -721,16 +829,21 @@ img {
 	.footer .container {
 		flex-wrap: wrap;
 	}
+
+	.list-content {
+		border: 0.5px solid var(--backgrounds-Light-color);
+		border-top: none;
+	}
 }
 
-/* ____________________  MAX WIDTH 1200  __________________ */
+/* ____________________ MOBILE-TABLET __________________ */
 
 /* _________________________ TABLET _______________________ */
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
 
 	.container {
-		width: 768px;
+		max-width: 768px;
 	}
 
 	.contacts-link {
@@ -799,13 +912,33 @@ img {
 	.footer-summary {
 		margin-bottom: 72px;
 	}
+
+	/* ********************* PORTFOLIO TABLET ******************* */
+	.section.portfolio {
+		padding-top: 64px;
+		padding-bottom: 96px;
+	}
+
+	.filter-nav {
+		margin-bottom: 64px;
+	}
+
+	.portfolio-list {
+		flex-basis: calc((100% - 24px) / 2);
+		justify-content: space-between;
+		gap: 72px 0px;
+	}
+
+	.portfolio-list .item {
+		max-width: 356px;
+	}
+
 }
-
-
 
 /* __________________________ TABLET ____________________________ */
 
-/* _______________________  MIN-WIDTH 768px _____________________ */
+
+/* _______________________  TABLET-DESCTOP _____________________ */
 
 @media screen and (min-width: 768px) {
 
@@ -935,10 +1068,35 @@ img {
 	.email-input-footer {
 		margin-right: 24px;
 	}
+
+	/* ********************** PORTFOLIO TABLET-DESCTOP ******************* */
+
+	.filter-nav {
+		justify-content: center;
+	}
+
+	.butoon-filter {
+		padding: 12px 24px;
+	}
+
+	.filter-nav .filter-nav-btn:not(:last-child) {
+		margin-right: var(--card-set-gap);
+	}
+
+	.butoon-filter:hover,
+	.butoon-filter:focus,
+	.butoon-filter:active {
+		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	}
+
+	.portfolio-list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 }
 
-/* _____________________ MIN-WIDTH 768px ____________________ */
-
+/* _____________________ TABLET-DESCTOP ____________________ */
 
 /* ________________________ DESCTOP _________________________ */
 
@@ -971,6 +1129,8 @@ img {
 	.contacts-list:first-child {
 		margin-right: 40px;
 	}
+
+	/* ********************* HERO DESCTOP ********************* */
 
 	.hero {
 		padding-top: 188px;
@@ -1070,13 +1230,46 @@ img {
 		margin-right: auto;
 	}
 
+	/* ******************* PORTFOLIO DESCTOP ****************** */
 
+	.section.portfolio {
+		padding-top: 96px;
+		padding-bottom: 120px;
+	}
+
+	.filter-nav {
+		margin-bottom: 72px;
+	}
+
+	.portfolio-list {
+		flex-basis: calc((100% - 48px) / 3);
+	}
+
+	.portfolio-list .item {
+		max-width: 360px;
+	}
+
+	.portfolio-list .item:not(:nth-last-child(-n + 3)) {
+		margin-bottom: calc(2 * var(--card-set-gap));
+	}
+
+	.portfolio-list .item:not(:nth-child(3n)) {
+		margin-right: var(--card-set-gap);
+	}
+
+	.list-content {
+		border: 1px solid var(--Subtle-backgrounds-color);
+		border-top: none;
+	}
 }
 
+/* ________________________  DESCTOP__________________________ */
 
 
 
 /*=========================== hero ===================== */
+
+
 
 /* 
 .overlay {
@@ -1390,143 +1583,10 @@ border-color: var(--button-active-color);
 
 
 
-
-/* ===== section specialization ===== */
-
-/**/
-
-/* ===== section our team ===== */
-
-
-
-/* ===== Customers ====== */
-
-/*  */
-
-/* ================ footer ============= */
-
-/* */
-
 /* =================== portfolio ==================== */
 
-/* .section.portfolio {
-	padding-top: 96px;
-	padding-bottom: 120px;
-} */
 
-/* ===== portfolio filter ===== */
-
-/* .filter-nav {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 72px;
-}
-
-.filter-nav .filter-nav-btn:not(:last-child) {
-	margin-right: var(--card-set-gap);
-}
-
-.butoon-filter {
-	display: block;
-	font-family: inherit;
-	font-weight: 700;
-	line-height: 1.5;
-	letter-spacing: 0.04em;
-
-	padding: 12px 24px;
-	border-radius: 4px;
-
-	color: var(--Focused-link-color);
-	background-color: var(--backgrounds-Light-color);
-	border: 1px solid var(--Subtle-backgrounds-color);
-
-	transition: background-color, color, border, box-shadow;
-	transition-duration: 250ms;
-	transition-timing-function:
-		cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.butoon-filter:hover,
-.butoon-filter:focus,
-.butoon-filter:active {
-	outline: none;
-	border: 1px solid var(--button-active-color);
-	background-color: var(--button-active-color);
-	color: var(--bg-white-color);
-	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-} */
 
 /* ===== portfolio list ===== */
 
-/* .portfolio-list {
-	display: flex;
-	flex-wrap: wrap;
-	flex-basis: calc((100% - 48px) / 3);
-}
-
-.portfolio-list .link {
-	display: block;
-	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-
-transition: box-shadow;
-	transition-duration: 250ms;
-	transition-timing-function:
-		cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-list .link:hover,
-.portfolio-list .link:focus {
-	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-.portfolio-list-img {
-	position: relative;
-	overflow: hidden;
-}
-
-.portfolio-list-info .text {
-	color: var(--backgrounds-Light-color);
-}
-
-.portfolio-list-info {
-	position: absolute;
-	padding: 40px 32px;
-
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-
-	transform: translateY(100%);
-	background-color: var(--Focused-link-color);
-
-	transition: transform;
-	transition-duration: 250ms;
-	transition-timing-function:
-		cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-list .link:hover .portfolio-list-info,
-.portfolio-list .link:focus .portfolio-list-info {
-	transform: translateY(0);
-}
-
-.portfolio-list .item:not(:nth-last-child(-n + 3)) {
-	margin-bottom: calc(2 * var(--card-set-gap));
-}
-
-.portfolio-list .item:not(:nth-child(3n)) {
-	margin-right: var(--card-set-gap);
-}
-
-.list-content {
-	padding: 32px 16px;
-	border: 0.5px solid var(--backgrounds-Light-color);
-	border-top: none;
-}
-
-.portfolio-title {
-	font-size: 20px;
-	line-height: 1.2;
-	margin-bottom: 8px;
-} 
+/* 
