@@ -41,7 +41,7 @@ body {
 	font-size: 16px;
 	margin: 0 auto;
 	padding: 0;
-}
+	}
 
 img {
 	display: block;
@@ -1129,7 +1129,7 @@ display: block;
 @media screen and (min-width: 768px) and (max-width: 1200px) {
 
 	.container {
-		max-width: 768px;
+		width: 768px;
 	}
 
 	.contacts-link {
@@ -1227,6 +1227,10 @@ display: block;
 /* _______________________  TABLET-DESCTOP _____________________ */
 
 @media screen and (min-width: 768px) {
+
+	.container {
+		width: 768px;
+	}
 
 	.menu-hamburger-btn,
 	.mobile-menu .close-btn,
@@ -1398,15 +1402,17 @@ display: block;
 
 @media screen and (min-width: 1200px) {
 
+
+	.container {
+			width: 1158px;
+			padding: 0 15px;
+		}
+
 	.mobile-menu-container {
 		align-items: center;
 	}
 
-	.container {
-		margin: auto;
-		width: 1158px;
-		padding: 0 15px;
-	}
+
 
 	.container .logo {
 		margin-right: 76px;
