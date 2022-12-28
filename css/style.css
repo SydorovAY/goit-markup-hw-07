@@ -648,6 +648,7 @@ img {
 .socilal-label {
 	font-weight: 500;
 	line-height: 1.5;
+
 	margin-bottom: 16px;
 	color: var(--bg-white-color);
 }
@@ -691,6 +692,7 @@ img {
 .subscribe-label {
 	font-weight: 500;
 	line-height: 1.5;
+	
 	margin-bottom: 16px;
 	color: var(--bg-white-color);
 }
