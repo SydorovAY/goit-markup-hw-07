@@ -219,6 +219,8 @@ img {
 
 	opacity: 1;
 	overflow-y: scroll;
+
+		transition: transform, opacity;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	background-color: rgba(46, 47, 66, 0.4);
@@ -244,10 +246,11 @@ img {
 
 	transform: translatey(-50%);
 	opacity: 1;
-	transition: inherit;
-	transition-duration: 300ms;
-	transition-timing-function:
-		cubic-bezier(0.4, 0, 0.2, 1);
+
+	transition: transform;
+		transition-duration: 250ms;
+		transition-timing-function:
+			cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal .close-btn {
