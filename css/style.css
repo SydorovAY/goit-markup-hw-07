@@ -1,7 +1,5 @@
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
+* {
+	-webkit-tap-highlight-color: transparent;
 }
 
 h1,
@@ -33,11 +31,12 @@ ul {
 /* ============== param ============ */
 
 body {
+	min-width: 320px;
 	background-color: var(--bg-white-color);
 	color: var(--Body-text-color);
 	font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 16px;
-	margin: 0 auto;
+	margin: auto;
 	padding: 0;
 }
 
@@ -110,7 +109,6 @@ img {
 }
 
 .mobile-menu {
-	overflow-y: scroll;
 	width: 100%;
 	height: 100%;
 }
@@ -151,6 +149,11 @@ img {
 	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
+.header .container {
+	display: flex;
+	align-items: center;
+}
+
 .hero .title {
 	margin: auto;
 	font-weight: 500;
@@ -159,8 +162,6 @@ img {
 }
 
 .hero {
-	min-width: 320px;
-	max-width: 1440px;
 	background-color: var(--Headings-color);
 }
 
@@ -191,6 +192,7 @@ img {
 }
 
 .overlay {
+	min-width: 320px;
 	max-width: 1440px;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -220,7 +222,7 @@ img {
 	opacity: 1;
 	overflow-y: scroll;
 
-		transition: transform, opacity;
+	transition: transform, opacity;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	background-color: rgba(46, 47, 66, 0.4);
@@ -234,8 +236,8 @@ img {
 
 .modal {
 	position: absolute;
-
 	left: 50%;
+	top: 50%;
 
 	border-radius: 4px;
 	background-color: var(--bg-modal-color);
@@ -243,14 +245,11 @@ img {
 		0px 1px 3px 0px rgba(0, 0, 0, 0.12),
 		0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 
-
-	transform: translatey(-50%);
 	opacity: 1;
-
 	transition: transform;
-		transition-duration: 250ms;
-		transition-timing-function:
-			cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 250ms;
+	transition-timing-function:
+		cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal .close-btn {
@@ -837,14 +836,15 @@ img {
 		display: none;
 	}
 
-	.header .container {
-		padding-top: 24px;
-		padding-bottom: 24px;
+	.container {
+		max-width: 428px;
 	}
 
 	.header .container {
-		display: flex;
 		justify-content: space-between;
+
+		padding-top: 24px;
+		padding-bottom: 24px;
 	}
 
 
@@ -859,9 +859,11 @@ img {
 
 	.mobile-menu {
 		position: fixed;
-		z-index: 100;
 		top: 0;
 		left: 0;
+
+		z-index: 100;
+		overflow-y: scroll;
 
 		opacity: 0;
 		visibility: hidden;
@@ -953,7 +955,7 @@ img {
 	/* ********************* HERO MOBILE ******************* */
 
 	.hero .title {
-		width: 318px;
+		max-width: 318px;
 		font-size: 36px;
 		line-height: 1.11;
 		margin-bottom: 72px;
@@ -964,7 +966,8 @@ img {
 	}
 
 	.modal {
-		width: 392px;
+		width: calc(100% - 36px);
+		max-width: 392px;
 		padding: 24px 16px;
 
 	}
@@ -1056,16 +1059,6 @@ img {
 /* _______________________ MOBILE  _________________________ */
 
 
-/* _____________________ MIN WIDTH 428 _____________________ */
-
-@media screen and (min-width: 428px) and (max-width: 768px) {
-	.container {
-		width: 428px;
-	}
-}
-
-/* ____________________  MIN WIDTH 428 ______________________ */
-
 /* ____________________ MOBILE-TABLET ______________________ */
 
 @media screen and (max-width: 1200px) {
@@ -1086,7 +1079,6 @@ img {
 	}
 
 	.modal {
-		height: 586px;
 		top: 96px;
 		transform: translatex(-50%);
 	}
@@ -1141,7 +1133,7 @@ img {
 @media screen and (min-width: 768px) and (max-width: 1200px) {
 
 	.container {
-		width: 768px;
+		max-width: 768px;
 	}
 
 	.contacts-link {
@@ -1236,13 +1228,9 @@ img {
 /* __________________________ TABLET ____________________________ */
 
 
-/* _______________________  TABLET-DESCTOP _____________________ */
+/* ____________  TABLET-DESCTOP (min-width: 768px) _____________ */
 
 @media screen and (min-width: 768px) {
-
-	.container {
-		width: 768px;
-	}
 
 	.menu-hamburger-btn,
 	.mobile-menu .close-btn,
@@ -1255,11 +1243,7 @@ img {
 		justify-content: space-between;
 	}
 
-	.header .container {
-		display: flex;
-		align-items: center;
-
-	}
+	/* ******************* HEADER TABLET-DESCTOP **************** */
 
 	.header .logo {
 		color: var(--Headings-color);
@@ -1315,12 +1299,9 @@ img {
 		height: 4px;
 		bottom: 0;
 
-
 		background-color: var(--button-active-color);
 		border-radius: 2px;
 	}
-
-
 
 	.contacts-link {
 		color: var(--Body-text-color);
@@ -1331,12 +1312,13 @@ img {
 			cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-
 	.contacts-link:hover,
 	.contacts-link:focus,
 	.contacts-link:active {
 		color: var(--button-active-color)
 	}
+
+	/* ******************* HERO TABLET-DESCTOP **************** */
 
 	.hero {
 		display: flex;
@@ -1381,7 +1363,7 @@ img {
 		margin-right: 24px;
 	}
 
-	/* ********************** PORTFOLIO TABLET-DESCTOP ******************* */
+	/* ******************* PORTFOLIO TABLET-DESCTOP **************** */
 
 	.filter-nav {
 		justify-content: center;
@@ -1408,23 +1390,21 @@ img {
 
 }
 
-/* _____________________ TABLET-DESCTOP ____________________ */
+/* ___________ TABLET-DESCTOP (min-width: 768px) ____________ */
 
-/* ________________________ DESCTOP _________________________ */
+/* ______________ DESCTOP (min-width: 1200px) _______________ */
 
 @media screen and (min-width: 1200px) {
 
 
 	.container {
-		width: 1158px;
+		max-width: 1158px;
 		padding: 0 15px;
 	}
 
 	.mobile-menu-container {
 		align-items: center;
 	}
-
-
 
 	.container .logo {
 		margin-right: 76px;
@@ -1449,7 +1429,6 @@ img {
 	.hero {
 		padding-top: 188px;
 		padding-bottom: 188px;
-
 		margin: auto;
 	}
 
@@ -1460,7 +1439,6 @@ img {
 
 
 	.modal {
-		height: 584px;
 		top: 80px;
 		transform: translatex(-50%);
 	}
