@@ -117,14 +117,16 @@ img {
 	position: absolute;
 	display: block;
 
-
 	width: 24px;
 	height: 24px;
 
-	border-radius: 50%;
+	padding: 7px;
+
+	border-radius: 50px;
 	line-height: 0;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 
 .mobile-menu .close-btn {
 	top: 40px;
@@ -641,8 +643,9 @@ img {
 	display: flex;
 }
 
-.footer-social-media {
-	font-weight: 700;
+.socilal-label {
+	font-weight: 500;
+	line-height: 1.5;
 	margin-bottom: 16px;
 	color: var(--bg-white-color);
 }
@@ -686,7 +689,6 @@ img {
 .subscribe-label {
 	font-weight: 500;
 	line-height: 1.5;
-	letter-spacing: 0.02em;
 	margin-bottom: 16px;
 	color: var(--bg-white-color);
 }
@@ -850,7 +852,7 @@ img {
 
 	/* ***************************** MENU MOBILE *************************** */
 
-	.menu-hamburger-btn {
+	.menu.button {
 		background-color: transparent;
 		line-height: 0;
 		padding: 0;
@@ -1232,7 +1234,7 @@ img {
 
 @media screen and (min-width: 768px) {
 
-	.menu-hamburger-btn,
+	.menu.button,
 	.mobile-menu .close-btn,
 	.mobile-menu .social-list {
 		display: none;
