@@ -196,14 +196,10 @@ img {
 }
 
 .overlay {
-	min-width: 320px;
-	max-width: 1440px;
+
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-
-	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-		url(../images/bg_img/people_office.jpg);
 }
 
 /* ***************************** MODAL GENERAL *************************** */
@@ -787,784 +783,840 @@ img {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-	.portfolio-list-img {
-		position: relative;
-		overflow: hidden;
+.portfolio-list-img {
+	position: relative;
+	overflow: hidden;
+}
+
+.portfolio-list-info .text {
+	color: var(--backgrounds-Light-color);
+}
+
+.portfolio-list-info {
+	position: absolute;
+	padding: 40px 32px;
+
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	transform: translateY(100%);
+	background-color: var(--Focused-link-color);
+
+	transition: transform;
+	transition-duration: 250ms;
+	transition-timing-function:
+		cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list .link:hover .portfolio-list-info,
+.portfolio-list .link:focus .portfolio-list-info {
+	transform: translateY(0);
+}
+
+.list-content {
+	padding: 32px 16px;
+}
+
+.portfolio-title {
+	font-weight: 500px;
+	font-size: 20px;
+	line-height: 1.2;
+	margin-bottom: 8px;
+}
+
+
+/* ____________________ GENERAL ______________ */
+
+/* *******************  MOBILE ****************** */
+
+@media screen and (max-width: 768px) {
+
+	.site-nav,
+	.contacts {
+		display: none;
 	}
 
-	.portfolio-list-info .text {
-		color: var(--backgrounds-Light-color);
+	.container {
+		max-width: 428px;
 	}
 
-	.portfolio-list-info {
-		position: absolute;
-		padding: 40px 32px;
+	.header .container {
+		justify-content: space-between;
 
-		left: 0;
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+
+
+	/* ***************************** MENU MOBILE *************************** */
+
+	.menu.button {
+		background-color: transparent;
+		line-height: 0;
+		padding: 0;
+		border: none;
+	}
+
+	.mobile-menu {
+		position: fixed;
 		top: 0;
-		width: 100%;
+		left: 0;
+
+		z-index: 100;
+		overflow-y: scroll;
+
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: auto;
+		background-color: var(--bg-white-color);
+	}
+
+	.mobile-menu.is-open {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: painted;
+	}
+
+	.mobile-menu-container {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		max-width: 428px;
+		max-height: 796px;
+		padding: 40px;
+		margin: auto;
+
 		height: 100%;
+		background-color: var(--bg-white-color);
+	}
 
-		transform: translateY(100%);
-		background-color: var(--Focused-link-color);
+	.mobile-menu .site-nav {
+		display: block;
+		margin-top: 40px;
+		margin-bottom: auto;
+	}
 
-		transition: transform;
+	.mobile-menu .contacts {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+
+	.mobile-menu .nav-link {
+		display: flex;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 1.1;
+		color: var(--Headings-color);
+	}
+
+	.mobile-menu .nav-list:not(:last-child) {
+		margin-bottom: 40px;
+	}
+
+	.mobile-menu .nav-list:last-child .link {
+		color: var(--button-active-color);
+	}
+
+
+	.mobile-menu .contacts-link {
+		display: flex;
+		font-size: 36px;
+		line-height: 1.1;
+		color: var(--Headings-color);
+	}
+
+	.mobile-menu .contacts-list:last-child .link {
+		font-weight: 700;
+		margin-bottom: 40px;
+		color: var(--Focused-link-color);
+
+	}
+
+	.mobile-menu .contacts-list:first-child .link {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.2;
+	}
+
+
+	.mobile-menu .contacts {
+		margin-bottom: 48px;
+	}
+
+
+	.social-list {
+		justify-content: space-between;
+		max-width: 328px;
+	}
+
+
+
+	/* ********************* HERO MOBILE ******************* */
+
+	.hero {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+			url(../images/bg_img/people-offic-mobile.jpg);
+	}
+
+	@media (min-resolution: 2dppx) {
+		.hero {
+			background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+				url(../images/bg_img/people-offic-mobile_2x.jpg);
+		}
+	}
+
+
+	@media (min-resolution: 3dppx) {
+		.hero {
+			background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+				url(../images/bg_img/people-offic-mobile_3x.jpg);
+		}
+	}
+
+	.hero .title {
+		max-width: 318px;
+		font-size: 36px;
+		line-height: 1.11;
+		margin-bottom: 72px;
+	}
+
+	.button-order {
+		margin: auto;
+	}
+
+	.modal {
+		width: calc(100% - 36px);
+		max-width: 392px;
+		padding: 24px 16px;
+
+	}
+
+
+	/* ********************* FEATURE NOBILE **************** */
+
+	.feature-list .title {
+		text-align: center;
+	}
+
+	.feature-list .item:not(:last-child) {
+		margin-bottom: 72px;
+	}
+
+	/* ********************** TEAM NOBILE ****************** */
+
+	.section.team {
+		padding-bottom: 128px;
+	}
+
+
+	.team-list .card {
+		margin: 0 auto;
+	}
+
+	.team-list .card:not(:last-child) {
+		margin-bottom: 72px;
+	}
+
+
+	/* ****************** CUSTOMERS MOBILE ******************** */
+
+
+	.customer-list {
+		flex-basis: calc((100% - 16px) / 2);
+		gap: 72px 16px;
+	}
+
+
+	/* ****************** FOOTER MOBILE ******************** */
+
+	.footer .container {
+		justify-content: center;
+		text-align: center;
+	}
+
+	.email-input-footer {
+		width: 100%;
+		margin-bottom: 16px;
+	}
+
+	.footer-summary {
+		margin-bottom: 72px;
+	}
+
+	.footer-social {
+		margin-bottom: 72px;
+	}
+
+	/* ****************** PORTFOLIO MOBILE ********************** */
+	.section.portfolio {
+		padding-top: 48px;
+		padding-bottom: 48px;
+	}
+
+	.filter-nav {
+		width: 264px;
+		gap: 16px 24px;
+		margin-bottom: 48px;
+	}
+
+	.butoon-filter {
+		text-align: center;
+		padding: 7px 15px;
+	}
+
+	.portfolio-list .item {
+		max-width: 396px;
+	}
+
+	.portfolio-list .item:not(:last-child) {
+		margin-bottom: 48px;
+	}
+
+
+}
+
+/* _______________________ MOBILE  _________________________ */
+
+
+/* ____________________ MOBILE-TABLET ______________________ */
+
+@media screen and (max-width: 1200px) {
+
+	.specialization {
+		display: none;
+	}
+
+	.container {
+		padding-left: 16px;
+		padding-right: 16px;
+
+	}
+
+	.hero {
+		padding-top: 112px;
+		padding-bottom: 112px;
+	}
+
+	.modal {
+		top: 96px;
+		transform: translatex(-50%);
+	}
+
+	.form-modal-title {
+		margin-bottom: 16px;
+	}
+
+	.future-icon {
+		display: none;
+	}
+
+	.feature-list .title {
+		font-size: 36px;
+		line-height: 1.11;
+		color: var(--Headings-color)
+	}
+
+	.section-feature {
+		padding-top: 96px;
+		padding-bottom: 96px;
+	}
+
+	.feature-list .text {
+		font-weight: 500;
+	}
+
+	.section-customers {
+		padding-top: 96px;
+		padding-bottom: 96px;
+	}
+
+	.footer {
+		padding-top: 96px;
+		padding-bottom: 96px;
+	}
+
+	.footer .container {
+		flex-wrap: wrap;
+	}
+
+	.list-content {
+		border: 0.5px solid var(--backgrounds-Light-color);
+		border-top: none;
+	}
+}
+
+/* ____________________ MOBILE-TABLET __________________ */
+
+/* _________________________ TABLET _______________________ */
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+	.container {
+		max-width: 768px;
+	}
+
+	.contacts-link {
+		display: block;
+		font-size: 12px;
+		line-height: 1.33;
+		letter-spacing: 0.04em;
+	}
+
+	.contacts-list:first-child {
+		padding-top: 24px;
+		margin-bottom: 4px;
+	}
+
+	.contacts-list:last-child {
+		padding-bottom: 10px;
+	}
+
+	.hero {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+			url(../images/bg_img/people-offic-tablet.jpg);
+	}
+
+	@media (min-resolution: 2dppx) {
+		.hero {
+			background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+				url(../images/bg_img/people-offic-tablet_2x.jpg);
+		}
+	}
+
+	@media (min-resolution: 3dppx) {
+		.hero {
+			background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+				url(../images/bg_img/people-offic-tablet_3x.jpg);
+		}
+	}
+
+	.hero .title {
+		margin-bottom: 40px;
+	}
+
+	.feature-list {
+		flex-wrap: wrap;
+	}
+
+	.feature-list .item {
+		padding: 0;
+		width: 356px;
+	}
+
+	.feature-list {
+		justify-content: space-between;
+	}
+
+	.feature-list .item:nth-child(-n+2) {
+		margin-bottom: 72px;
+	}
+
+	.section.team {
+		padding-bottom: 104px;
+	}
+
+
+	.team-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.team-list .card:nth-child(-n+2) {
+		margin-bottom: 72px;
+	}
+
+	.team-list .card:nth-child(odd) {
+
+		margin-right: var(--card-set-gap);
+	}
+
+
+	.customer-list {
+		flex-basis: calc((100% - 48px) / 3);
+		gap: 72px 24px;
+	}
+
+	.footer-summary {
+		margin-bottom: 72px;
+	}
+
+	/* ********************* PORTFOLIO TABLET ******************* */
+	.section.portfolio {
+		padding-top: 64px;
+		padding-bottom: 96px;
+	}
+
+	.filter-nav {
+		margin-bottom: 64px;
+	}
+
+	.portfolio-list {
+		flex-basis: calc((100% - 24px) / 2);
+		justify-content: space-between;
+		gap: 72px 0px;
+	}
+
+	.portfolio-list .item {
+		max-width: 356px;
+	}
+
+}
+
+/* __________________________ TABLET ____________________________ */
+
+
+/* ____________  TABLET-DESCTOP (min-width: 768px) _____________ */
+
+@media screen and (min-width: 768px) {
+
+	.menu.button,
+	.mobile-menu .close-btn,
+	.mobile-menu .social-list {
+		display: none;
+	}
+
+	.mobile-menu-container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	/* ******************* HEADER TABLET-DESCTOP **************** */
+
+	.header .logo {
+		color: var(--Headings-color);
+		margin-right: 123px;
+		padding: 24px 0;
+	}
+
+	.site-nav {
+		display: flex;
+		margin-right: auto;
+	}
+
+	.site-nav .nav-list:not(:last-child) {
+		margin-right: 40px;
+	}
+
+	.nav-link {
+		display: block;
+		position: relative;
+		color: var(--Headings-color);
+		font-weight: 700;
+		padding: 24px 0;
+		line-height: 1.5;
+		letter-spacing: 0.02em;
+
+		transition-property: color;
 		transition-duration: 250ms;
 		transition-timing-function:
 			cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-	.portfolio-list .link:hover .portfolio-list-info,
-	.portfolio-list .link:focus .portfolio-list-info {
-		transform: translateY(0);
+	.nav-link:hover,
+	.nav-link:focus,
+	.nav-link:active {
+		color: var(--button-active-color);
+	}
+
+	.current {
+		color: var(--button-active-color);
+
+		transition-property: color;
+		transition-duration: 250ms;
+		transition-timing-function:
+			cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.current::after {
+		position: absolute;
+		display: block;
+		content: "";
+
+		width: 100%;
+		height: 4px;
+		bottom: 0;
+
+		background-color: var(--button-active-color);
+		border-radius: 2px;
+	}
+
+	.contacts-link {
+		color: var(--Body-text-color);
+
+		transition-property: color;
+		transition-duration: 250ms;
+		transition-timing-function:
+			cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.contacts-link:hover,
+	.contacts-link:focus,
+	.contacts-link:active {
+		color: var(--button-active-color)
+	}
+
+	/* ******************* HERO TABLET-DESCTOP **************** */
+
+	.hero {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero .title {
+		width: 494px;
+		font-size: 56px;
+		line-height: 1.07;
+	}
+
+	.modal {
+		width: 408px;
+		padding: 24px;
+	}
+
+	.form-modal-title {
+		margin-bottom: 14px;
+	}
+
+
+	.feature-list {
+		display: flex;
+	}
+
+	.social-list-item:not(:last-child) {
+		margin-right: var(--card-set-gap);
+	}
+
+	.subscribe-area {
+		display: flex;
+	}
+
+	.footer-summary {
+		margin-right: 24px;
+	}
+
+	.email-input-footer {
+		margin-right: 24px;
+	}
+
+	/* ******************* PORTFOLIO TABLET-DESCTOP **************** */
+
+	.filter-nav {
+		justify-content: center;
+	}
+
+	.butoon-filter {
+		padding: 12px 24px;
+	}
+
+	.filter-nav .filter-nav-btn:not(:last-child) {
+		margin-right: var(--card-set-gap);
+	}
+
+	.butoon-filter:hover,
+	.butoon-filter:focus,
+	.butoon-filter:active {
+		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	}
+
+	.portfolio-list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+}
+
+/* ___________ TABLET-DESCTOP (min-width: 768px) ____________ */
+
+/* ______________ DESCTOP (min-width: 1200px) _______________ */
+
+@media screen and (min-width: 1200px) {
+
+
+	.container {
+		max-width: 1158px;
+		padding: 0 15px;
+	}
+
+	.mobile-menu-container {
+		align-items: center;
+	}
+
+	.container .logo {
+		margin-right: 76px;
+	}
+
+	.contacts-list {
+		display: inline-flex;
+		line-height: 1.5;
+	}
+
+	.contacts-link {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+
+	.contacts-list:first-child {
+		margin-right: 40px;
+	}
+
+	/* ********************* HERO DESCTOP ********************* */
+
+	.hero {
+		max-width: 100%;
+		padding-top: 188px;
+		padding-bottom: 188px;
+		margin: auto;
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+			url(../images/bg_img/people_office.jpg);
+	}
+
+	@media (min-resolution: 2dppx) {
+		.hero {
+			background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+				url(../images/bg_img/people-office_2x.jpg);
+		}
+	}
+
+	@media (min-resolution: 3dppx) {
+		.hero {
+			background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+				url(../images/bg_img/people-offic_3x.jpg);
+		}
+	}
+
+	.hero .title {
+		margin-bottom: 48px;
+		width: 494px;
+	}
+
+
+	.modal {
+		top: 80px;
+		transform: translatex(-50%);
+	}
+
+
+	/* ********************* FEATURE DESCTOP ********************* */
+
+	.feature-list .list-title {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.2;
+	}
+
+	.section-feature {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+
+	.feature-list .item {
+		width: 264px;
+	}
+
+	.feature-list .item:not(:last-child) {
+		margin-right: var(--card-set-gap);
+	}
+
+
+	/* ******************** specialization DESCTOP **************** */
+
+	.section.specialization {
+		padding-bottom: 120px;
+	}
+
+
+	.specialization-title {
+		font-size: 36px;
+		line-height: 1.11;
+
+		text-transform: capitalize;
+		text-align: center;
+		margin-bottom: 72px;
+	}
+
+	.specialization-list {
+		display: flex;
+		flex-basis: calc((100% - 48px) / 3);
+	}
+
+	.specialization-list>.item:not(:last-child) {
+		margin-right: var(--card-set-gap);
+	}
+
+	/* ************************ TEAM DESCTOP ************************ */
+
+	.section.team {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+
+	.team-list {
+		display: flex;
+		flex-basis: calc((100% - 72px) / 4);
+	}
+
+	.team-list>.card:not(:last-child) {
+		margin-right: var(--card-set-gap);
+	}
+
+	/* ********************* CUSTOMERS DESCTOP ********************* */
+	.footer {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	.section-customers {
+		padding: 120px 0;
+	}
+
+	.customers-item:not(:last-child) {
+		margin-right: 24px;
+	}
+
+
+	.footer-summary {
+		margin-right: 120px;
+	}
+
+	.footer-social {
+		margin-right: auto;
+	}
+
+	/* ******************* PORTFOLIO DESCTOP ****************** */
+
+	.section.portfolio {
+		padding-top: 96px;
+		padding-bottom: 120px;
+	}
+
+	.filter-nav {
+		margin-bottom: 72px;
+	}
+
+	.portfolio-list {
+		flex-basis: calc((100% - 48px) / 3);
+	}
+
+	.portfolio-list .item {
+		max-width: 360px;
+	}
+
+	.portfolio-list .item:not(:nth-last-child(-n + 3)) {
+		margin-bottom: calc(2 * var(--card-set-gap));
+	}
+
+	.portfolio-list .item:not(:nth-child(3n)) {
+		margin-right: var(--card-set-gap);
 	}
 
 	.list-content {
-		padding: 32px 16px;
+		border: 1px solid var(--Subtle-backgrounds-color);
+		border-top: none;
 	}
-
-	.portfolio-title {
-		font-weight: 500px;
-		font-size: 20px;
-		line-height: 1.2;
-		margin-bottom: 8px;
-	}
-
-
-	/* ____________________ GENERAL ______________ */
-
-	/* *******************  MOBILE ****************** */
-
-	@media screen and (max-width: 768px) {
-
-		.site-nav,
-		.contacts {
-			display: none;
-		}
-
-		.container {
-			max-width: 428px;
-		}
-
-		.header .container {
-			justify-content: space-between;
-
-			padding-top: 24px;
-			padding-bottom: 24px;
-		}
-
-
-		/* ***************************** MENU MOBILE *************************** */
-
-		.menu.button {
-			background-color: transparent;
-			line-height: 0;
-			padding: 0;
-			border: none;
-		}
-
-		.mobile-menu {
-			position: fixed;
-			top: 0;
-			left: 0;
-
-			z-index: 100;
-			overflow-y: scroll;
-
-			opacity: 0;
-			visibility: hidden;
-			pointer-events: auto;
-			background-color: var(--bg-white-color);
-		}
-
-		.mobile-menu.is-open {
-			opacity: 1;
-			visibility: visible;
-			pointer-events: painted;
-		}
-
-		.mobile-menu-container {
-			display: flex;
-			flex-direction: column;
-			position: relative;
-			max-width: 428px;
-			max-height: 786px;
-			padding: 40px;
-			margin: auto;
-
-			height: 100%;
-			background-color: var(--bg-white-color);
-		}
-
-		.mobile-menu .site-nav {
-			display: block;
-			margin-top: 40px;
-			margin-bottom: auto;
-		}
-
-		.mobile-menu .contacts {
-			display: flex;
-			flex-direction: column-reverse;
-		}
-
-
-		.mobile-menu .nav-link {
-			display: flex;
-			font-weight: 700;
-			font-size: 36px;
-			line-height: 1.1;
-			color: var(--Headings-color);
-		}
-
-		.mobile-menu .nav-list:not(:last-child) {
-			margin-bottom: 40px;
-		}
-
-		.mobile-menu .nav-list:last-child .link {
-			color: var(--button-active-color);
-		}
-
-
-		.mobile-menu .contacts-link {
-			display: flex;
-			font-size: 36px;
-			line-height: 1.1;
-			color: var(--Headings-color);
-		}
-
-		.mobile-menu .contacts-list:last-child .link {
-			font-weight: 700;
-			margin-bottom: 40px;
-			color: var(--Focused-link-color);
-
-		}
-
-		.mobile-menu .contacts-list:first-child .link {
-			font-weight: 500;
-			font-size: 20px;
-			line-height: 1.2;
-		}
-
-
-		.mobile-menu .contacts {
-			margin-bottom: 48px;
-		}
-
-
-		.social-list {
-			justify-content: space-between;
-			max-width: 328px;
-		}
-
-
-
-		/* ********************* HERO MOBILE ******************* */
-
-		.hero .title {
-			max-width: 318px;
-			font-size: 36px;
-			line-height: 1.11;
-			margin-bottom: 72px;
-		}
-
-		.button-order {
-			margin: auto;
-		}
-
-		.modal {
-			width: calc(100% - 36px);
-			max-width: 392px;
-			padding: 24px 16px;
-
-		}
-
-
-		/* ********************* FEATURE NOBILE **************** */
-
-		.feature-list .title {
-			text-align: center;
-		}
-
-		.feature-list .item:not(:last-child) {
-			margin-bottom: 72px;
-		}
-
-		/* ********************** TEAM NOBILE ****************** */
-
-		.section.team {
-			padding-bottom: 128px;
-		}
-
-
-		.team-list .card {
-			margin: 0 auto;
-		}
-
-		.team-list .card:not(:last-child) {
-			margin-bottom: 72px;
-		}
-
-
-		/* ****************** CUSTOMERS MOBILE ******************** */
-
-
-		.customer-list {
-			flex-basis: calc((100% - 16px) / 2);
-			gap: 72px 16px;
-		}
-
-
-		/* ****************** FOOTER MOBILE ******************** */
-
-		.footer .container {
-			justify-content: center;
-			text-align: center;
-		}
-
-		.email-input-footer {
-			width: 100%;
-			margin-bottom: 16px;
-		}
-
-		.footer-summary {
-			margin-bottom: 72px;
-		}
-
-		.footer-social {
-			margin-bottom: 72px;
-		}
-
-		/* ****************** PORTFOLIO MOBILE ********************** */
-		.section.portfolio {
-			padding-top: 48px;
-			padding-bottom: 48px;
-		}
-
-		.filter-nav {
-			width: 264px;
-			gap: 16px 24px;
-			margin-bottom: 48px;
-		}
-
-		.butoon-filter {
-			text-align: center;
-			padding: 7px 15px;
-		}
-
-		.portfolio-list .item {
-			max-width: 396px;
-		}
-
-		.portfolio-list .item:not(:last-child) {
-			margin-bottom: 48px;
-		}
-
-
-	}
-
-	/* _______________________ MOBILE  _________________________ */
-
-
-	/* ____________________ MOBILE-TABLET ______________________ */
-
-	@media screen and (max-width: 1200px) {
-
-		.specialization {
-			display: none;
-		}
-
-		.container {
-			padding-left: 16px;
-			padding-right: 16px;
-
-		}
-
-		.hero {
-			padding-top: 112px;
-			padding-bottom: 112px;
-		}
-
-		.modal {
-			top: 96px;
-			transform: translatex(-50%);
-		}
-
-		.form-modal-title {
-			margin-bottom: 16px;
-		}
-
-		.future-icon {
-			display: none;
-		}
-
-		.feature-list .title {
-			font-size: 36px;
-			line-height: 1.11;
-			color: var(--Headings-color)
-		}
-
-		.section-feature {
-			padding-top: 96px;
-			padding-bottom: 96px;
-		}
-
-		.feature-list .text {
-			font-weight: 500;
-		}
-
-		.section-customers {
-			padding-top: 96px;
-			padding-bottom: 96px;
-		}
-
-		.footer {
-			padding-top: 96px;
-			padding-bottom: 96px;
-		}
-
-		.footer .container {
-			flex-wrap: wrap;
-		}
-
-		.list-content {
-			border: 0.5px solid var(--backgrounds-Light-color);
-			border-top: none;
-		}
-	}
-
-	/* ____________________ MOBILE-TABLET __________________ */
-
-	/* _________________________ TABLET _______________________ */
-
-	@media screen and (min-width: 768px) and (max-width: 1200px) {
-
-		.container {
-			max-width: 768px;
-		}
-
-		.contacts-link {
-			display: block;
-			font-size: 12px;
-			line-height: 1.33;
-			letter-spacing: 0.04em;
-		}
-
-		.contacts-list:first-child {
-			padding-top: 24px;
-			margin-bottom: 4px;
-		}
-
-		.contacts-list:last-child {
-			padding-bottom: 10px;
-		}
-
-		.hero .title {
-			margin-bottom: 40px;
-		}
-
-		.feature-list {
-			flex-wrap: wrap;
-		}
-
-		.feature-list .item {
-			padding: 0;
-			width: 356px;
-		}
-
-		.feature-list {
-			justify-content: space-between;
-		}
-
-		.feature-list .item:nth-child(-n+2) {
-			margin-bottom: 72px;
-		}
-
-		.section.team {
-			padding-bottom: 104px;
-		}
-
-
-		.team-list {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-
-		.team-list .card:nth-child(-n+2) {
-			margin-bottom: 72px;
-		}
-
-		.team-list .card:nth-child(odd) {
-
-			margin-right: var(--card-set-gap);
-		}
-
-
-		.customer-list {
-			flex-basis: calc((100% - 48px) / 3);
-			gap: 72px 24px;
-		}
-
-		.footer-summary {
-			margin-bottom: 72px;
-		}
-
-		/* ********************* PORTFOLIO TABLET ******************* */
-		.section.portfolio {
-			padding-top: 64px;
-			padding-bottom: 96px;
-		}
-
-		.filter-nav {
-			margin-bottom: 64px;
-		}
-
-		.portfolio-list {
-			flex-basis: calc((100% - 24px) / 2);
-			justify-content: space-between;
-			gap: 72px 0px;
-		}
-
-		.portfolio-list .item {
-			max-width: 356px;
-		}
-
-	}
-
-	/* __________________________ TABLET ____________________________ */
-
-
-	/* ____________  TABLET-DESCTOP (min-width: 768px) _____________ */
-
-	@media screen and (min-width: 768px) {
-
-		.menu.button,
-		.mobile-menu .close-btn,
-		.mobile-menu .social-list {
-			display: none;
-		}
-
-		.mobile-menu-container {
-			display: flex;
-			justify-content: space-between;
-		}
-
-		/* ******************* HEADER TABLET-DESCTOP **************** */
-
-		.header .logo {
-			color: var(--Headings-color);
-			margin-right: 123px;
-			padding: 24px 0;
-		}
-
-		.site-nav {
-			display: flex;
-			margin-right: auto;
-		}
-
-		.site-nav .nav-list:not(:last-child) {
-			margin-right: 40px;
-		}
-
-		.nav-link {
-			display: block;
-			position: relative;
-			color: var(--Headings-color);
-			font-weight: 700;
-			padding: 24px 0;
-			line-height: 1.5;
-			letter-spacing: 0.02em;
-
-			transition-property: color;
-			transition-duration: 250ms;
-			transition-timing-function:
-				cubic-bezier(0.4, 0, 0.2, 1);
-		}
-
-		.nav-link:hover,
-		.nav-link:focus,
-		.nav-link:active {
-			color: var(--button-active-color);
-		}
-
-		.current {
-			color: var(--button-active-color);
-
-			transition-property: color;
-			transition-duration: 250ms;
-			transition-timing-function:
-				cubic-bezier(0.4, 0, 0.2, 1);
-		}
-
-		.current::after {
-			position: absolute;
-			display: block;
-			content: "";
-
-			width: 100%;
-			height: 4px;
-			bottom: 0;
-
-			background-color: var(--button-active-color);
-			border-radius: 2px;
-		}
-
-		.contacts-link {
-			color: var(--Body-text-color);
-
-			transition-property: color;
-			transition-duration: 250ms;
-			transition-timing-function:
-				cubic-bezier(0.4, 0, 0.2, 1);
-		}
-
-		.contacts-link:hover,
-		.contacts-link:focus,
-		.contacts-link:active {
-			color: var(--button-active-color)
-		}
-
-		/* ******************* HERO TABLET-DESCTOP **************** */
-
-		.hero {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.hero .title {
-			width: 494px;
-			font-size: 56px;
-			line-height: 1.07;
-		}
-
-		.modal {
-			width: 408px;
-			padding: 24px;
-		}
-
-		.form-modal-title {
-			margin-bottom: 14px;
-		}
-
-
-		.feature-list {
-			display: flex;
-		}
-
-		.social-list-item:not(:last-child) {
-			margin-right: var(--card-set-gap);
-		}
-
-		.subscribe-area {
-			display: flex;
-		}
-
-		.footer-summary {
-			margin-right: 24px;
-		}
-
-		.email-input-footer {
-			margin-right: 24px;
-		}
-
-		/* ******************* PORTFOLIO TABLET-DESCTOP **************** */
-
-		.filter-nav {
-			justify-content: center;
-		}
-
-		.butoon-filter {
-			padding: 12px 24px;
-		}
-
-		.filter-nav .filter-nav-btn:not(:last-child) {
-			margin-right: var(--card-set-gap);
-		}
-
-		.butoon-filter:hover,
-		.butoon-filter:focus,
-		.butoon-filter:active {
-			box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-		}
-
-		.portfolio-list {
-			display: flex;
-			flex-wrap: wrap;
-		}
-
-	}
-
-	/* ___________ TABLET-DESCTOP (min-width: 768px) ____________ */
-
-	/* ______________ DESCTOP (min-width: 1200px) _______________ */
-
-	@media screen and (min-width: 1200px) {
-
-
-		.container {
-			max-width: 1158px;
-			padding: 0 15px;
-		}
-
-		.mobile-menu-container {
-			align-items: center;
-		}
-
-		.container .logo {
-			margin-right: 76px;
-		}
-
-		.contacts-list {
-			display: inline-flex;
-			line-height: 1.5;
-		}
-
-		.contacts-link {
-			padding-top: 24px;
-			padding-bottom: 24px;
-		}
-
-		.contacts-list:first-child {
-			margin-right: 40px;
-		}
-
-		/* ********************* HERO DESCTOP ********************* */
-
-		.hero {
-			padding-top: 188px;
-			padding-bottom: 188px;
-			margin: auto;
-		}
-
-		.hero .title {
-			margin-bottom: 48px;
-			width: 494px;
-		}
-
-
-		.modal {
-			top: 80px;
-			transform: translatex(-50%);
-		}
-
-
-		/* ********************* FEATURE DESCTOP ********************* */
-
-		.feature-list .list-title {
-			font-weight: 500;
-			font-size: 20px;
-			line-height: 1.2;
-		}
-
-		.section-feature {
-			padding-top: 120px;
-			padding-bottom: 120px;
-		}
-
-		.feature-list .item {
-			width: 264px;
-		}
-
-		.feature-list .item:not(:last-child) {
-			margin-right: var(--card-set-gap);
-		}
-
-
-		/* ******************** specialization DESCTOP **************** */
-
-		.section.specialization {
-			padding-bottom: 120px;
-		}
-
-
-		.specialization-title {
-			font-size: 36px;
-			line-height: 1.11;
-
-			text-transform: capitalize;
-			text-align: center;
-			margin-bottom: 72px;
-		}
-
-		.specialization-list {
-			display: flex;
-			flex-basis: calc((100% - 48px) / 3);
-		}
-
-		.specialization-list>.item:not(:last-child) {
-			margin-right: var(--card-set-gap);
-		}
-
-		/* ************************ TEAM DESCTOP ************************ */
-
-		.section.team {
-			padding-top: 120px;
-			padding-bottom: 120px;
-		}
-
-		.team-list {
-			display: flex;
-			flex-basis: calc((100% - 72px) / 4);
-		}
-
-		.team-list>.card:not(:last-child) {
-			margin-right: var(--card-set-gap);
-		}
-
-		/* ********************* CUSTOMERS DESCTOP ********************* */
-		.footer {
-			padding-top: 100px;
-			padding-bottom: 100px;
-		}
-
-		.section-customers {
-			padding: 120px 0;
-		}
-
-		.customers-item:not(:last-child) {
-			margin-right: 24px;
-		}
-
-
-		.footer-summary {
-			margin-right: 120px;
-		}
-
-		.footer-social {
-			margin-right: auto;
-		}
-
-		/* ******************* PORTFOLIO DESCTOP ****************** */
-
-		.section.portfolio {
-			padding-top: 96px;
-			padding-bottom: 120px;
-		}
-
-		.filter-nav {
-			margin-bottom: 72px;
-		}
-
-		.portfolio-list {
-			flex-basis: calc((100% - 48px) / 3);
-		}
-
-		.portfolio-list .item {
-			max-width: 360px;
-		}
-
-		.portfolio-list .item:not(:nth-last-child(-n + 3)) {
-			margin-bottom: calc(2 * var(--card-set-gap));
-		}
-
-		.portfolio-list .item:not(:nth-child(3n)) {
-			margin-right: var(--card-set-gap);
-		}
-
-		.list-content {
-			border: 1px solid var(--Subtle-backgrounds-color);
-			border-top: none;
-		}
-	}
+}
