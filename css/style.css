@@ -281,7 +281,7 @@ img {
 	border: 1px solid rgba(33, 33, 33, 0.2);
 	background-color: transparent;
 
-	transition: border-color rgba(33, 33, 33, 0.2);
+	transition: border-color;
 	transition-duration: 250ms;
 	transition-timing-function:
 		cubic-bezier(0.4, 0, 0.2, 1);
