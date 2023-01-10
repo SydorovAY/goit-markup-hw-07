@@ -1031,11 +1031,16 @@ img {
 
 	/* ****************** CUSTOMERS MOBILE ******************** */
 
-
 	.customer-list {
-		flex-basis: calc((100% - 16px) / 2);
 		gap: 72px 16px;
 	}
+
+
+	.customer-item {
+		flex-basis: calc((100% - 16px) / 2);
+	}
+
+
 
 
 	/* ****************** FOOTER MOBILE ******************** */
@@ -1246,6 +1251,7 @@ img {
 		padding-bottom: 104px;
 	}
 
+/* ********************* TEAM TABLET ************************* */
 
 	.team-list {
 		display: flex;
@@ -1262,10 +1268,12 @@ img {
 		margin-right: var(--card-set-gap);
 	}
 
-
 	.customer-list {
-		flex-basis: calc((100% - 48px) / 3);
 		gap: 72px 24px;
+	}
+
+	.customer-item {
+		flex-basis: calc((100% - 48px) / 3);
 	}
 
 	.footer .container {
@@ -1287,13 +1295,11 @@ img {
 	}
 
 	.portfolio-list {
-		flex-basis: calc((100% - 24px) / 2);
-		justify-content: space-between;
-		gap: 72px 0px;
+		gap: 72px 24px;
 	}
 
 	.portfolio-list .item {
-		max-width: 356px;
+		flex-basis: calc((100% - 24px) / 2);
 	}
 
 }
@@ -1590,12 +1596,14 @@ img {
 
 	.specialization-list {
 		display: flex;
+		gap: 24px;
+	}
+
+	.specialization-list .item {
 		flex-basis: calc((100% - 48px) / 3);
 	}
 
-	.specialization-list>.item:not(:last-child) {
-		margin-right: var(--card-set-gap);
-	}
+
 
 	/* ************************ TEAM DESCTOP ************************ */
 
@@ -1606,11 +1614,11 @@ img {
 
 	.team-list {
 		display: flex;
-		flex-basis: calc((100% - 72px) / 4);
+		gap: 24px;
 	}
 
-	.team-list>.card:not(:last-child) {
-		margin-right: var(--card-set-gap);
+	.team-list .card {
+		flex-basis: calc((100% - 72px) / 4);
 	}
 
 	/* ********************* CUSTOMERS DESCTOP ********************* */
@@ -1648,20 +1656,14 @@ img {
 	}
 
 	.portfolio-list {
-		flex-basis: calc((100% - 48px) / 3);
+		gap: 72px 24px;
 	}
 
 	.portfolio-list .item {
-		max-width: 360px;
+		flex-basis: calc((100% - 48px) / 3);
 	}
 
-	.portfolio-list .item:not(:nth-last-child(-n + 3)) {
-		margin-bottom: calc(2 * var(--card-set-gap));
-	}
 
-	.portfolio-list .item:not(:nth-child(3n)) {
-		margin-right: var(--card-set-gap);
-	}
 
 	.list-content {
 		border: 1px solid var(--Subtle-backgrounds-color);
