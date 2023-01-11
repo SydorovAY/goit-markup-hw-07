@@ -849,12 +849,13 @@ img {
 		line-height: 0;
 		padding: 0;
 		border: none;
+
 	}
 
 	.mobile-menu {
 		position: fixed;
 		top: 0;
-		left: 0;
+		left: 50%;
 
 		z-index: 100;
 		overflow-y: scroll;
@@ -863,13 +864,30 @@ img {
 		visibility: hidden;
 		pointer-events: auto;
 		background-color: var(--bg-white-color);
+
+		transition: transform opasity;
+		transition-duration: 250ms;
+		transition-timing-function:
+			cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	.mobile-menu.is-open {
+
+		top: 0;
+		left: 0;
+
+
 		opacity: 1;
 		visibility: visible;
 		pointer-events: painted;
+
+		transition: transform opasity;
+		transition-duration: 250ms;
+		transition-timing-function:
+			cubic-bezier(0.4, 0, 0.2, 1);
 	}
+
+
 
 	.mobile-menu-container {
 		display: flex;
@@ -1251,7 +1269,7 @@ img {
 		padding-bottom: 104px;
 	}
 
-/* ********************* TEAM TABLET ************************* */
+	/* ********************* TEAM TABLET ************************* */
 
 	.team-list {
 		display: flex;
