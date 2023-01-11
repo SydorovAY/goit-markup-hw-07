@@ -245,7 +245,7 @@ img {
 		0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 
 	opacity: 1;
-	transition: transform;
+	transition: transform opasity;
 	transition-duration: 250ms;
 	transition-timing-function:
 		cubic-bezier(0.4, 0, 0.2, 1);
