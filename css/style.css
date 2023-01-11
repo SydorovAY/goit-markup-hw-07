@@ -222,7 +222,7 @@ img {
 	overflow-y: scroll;
 
 	transition: transform opacity;
-	transition-duration: 250ms;
+	transition-duration: 300ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	background-color: rgba(46, 47, 66, 0.4);
 }
@@ -246,7 +246,7 @@ img {
 
 	opacity: 1;
 	transition: transform opasity scale;
-	transition-duration: 250ms;
+	transition-duration: 300ms;
 	transition-timing-function:
 		cubic-bezier(0.4, 0, 0.2, 1);
 }
