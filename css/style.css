@@ -866,23 +866,21 @@ img {
 		background-color: var(--bg-white-color);
 
 		transition: transform opasity;
-		transition-duration: 250ms;
+		transition-duration: 300ms;
 		transition-timing-function:
 			cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	.mobile-menu.is-open {
-
 		top: 0;
 		left: 0;
-
 
 		opacity: 1;
 		visibility: visible;
 		pointer-events: painted;
 
 		transition: transform opasity;
-		transition-duration: 250ms;
+		transition-duration: 300ms;
 		transition-timing-function:
 			cubic-bezier(0.4, 0, 0.2, 1);
 	}
