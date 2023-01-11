@@ -1049,16 +1049,14 @@ img {
 	/* ****************** CUSTOMERS MOBILE ******************** */
 
 	.customer-list {
-		gap: 72px 16px;
+		column-gap: 16px;
+		row-gap: 72px;
 	}
 
 
-	.customer-item {
+	.customers-item {
 		flex-basis: calc((100% - 16px) / 2);
 	}
-
-
-
 
 	/* ****************** FOOTER MOBILE ******************** */
 
@@ -1088,7 +1086,8 @@ img {
 
 	.filter-nav {
 		width: 264px;
-		gap: 16px 24px;
+		column-gap: 16px;
+		row-gap: 24px;
 		margin-bottom: 48px;
 	}
 
@@ -1286,7 +1285,8 @@ img {
 	}
 
 	.customer-list {
-		gap: 72px 24px;
+		column-gap: 24px;
+		row-gap: 72px;
 	}
 
 	.customer-item {
@@ -1312,7 +1312,8 @@ img {
 	}
 
 	.portfolio-list {
-		gap: 72px 24px;
+		column-gap: 24px;
+		row-gap: 72px;
 	}
 
 	.portfolio-list .item {
@@ -1613,7 +1614,7 @@ img {
 
 	.specialization-list {
 		display: flex;
-		gap: 24px;
+		gap: var(--card-set-gap);
 	}
 
 	.specialization-list .item {
@@ -1631,7 +1632,7 @@ img {
 
 	.team-list {
 		display: flex;
-		gap: 24px;
+		gap: var(--card-set-gap);
 	}
 
 	.team-list .card {
@@ -1673,7 +1674,8 @@ img {
 	}
 
 	.portfolio-list {
-		gap: 72px 24px;
+		column-gap: 24px;
+		row-gap: 72px;
 	}
 
 	.portfolio-list .item {
