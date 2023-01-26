@@ -1,5 +1,5 @@
 two page website Web studio
 
-Використано normalize.css
+Normalize.css used
 
-Адаптивна верстка виконана щодо трьох точок перелому: 480px, 768px і 1200px.
+The adaptive layout is made for three pivot points: 480px, 768px and 1200px.
