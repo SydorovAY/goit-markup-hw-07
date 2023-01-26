@@ -1,4 +1,4 @@
-# goit-markup-hw-07
+two page website Web studio
 
 Використано normalize.css
 
